@@ -18,7 +18,13 @@ cat = (id,bert-output vector,payload={url:Base64 string})
 1. Deciding on the max-length for truncation for tokenization
 2. Write-out timeout issue when inserting data into qdrant cloud collection.
 
-### potential improvements
+### Potential improvements
 1. Checking for a better dataset with the structure of tag,description and image for better search.
    ("cat", "cats are playing in the garden", Image) the current datasets consists of pairs of tags and images.
 2. For a longer sequence, BLEU or ROUGE score are better evaluation metrics in comparision to euclidean distance. The current systems struggles with the large sequence input.
+
+## How to run
+1. replace your Qdrant API key and cluster url in file retrieval -> creds.py.
+2. Run the Django application using "python manage.py runserver"
+                  or
+1. Run "docker compose up --build" 
