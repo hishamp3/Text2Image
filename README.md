@@ -24,7 +24,5 @@ cat = (id,bert-output vector,payload={url:Base64 string})
 2. For a longer sequence, BLEU or ROUGE score are better evaluation metrics in comparision to euclidean distance. The current systems struggles with the large sequence input.
 
 ## How to run
-1. replace your Qdrant API key and cluster url in file retrieval -> creds.py.
+1. Replace your Qdrant API key and cluster url in file retrieval -> creds.py.
 2. Run the Django application using "python manage.py runserver"
-                  or
-1. Run "docker compose up --build" 
