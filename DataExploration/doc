@@ -1,0 +1,12 @@
+ADS-16 dataset consists of pairs of text tags and images.
+The dataset consists of 120 folders with each folder consisting of 10 images and their csv.
+
+kaggle_preprocess.py generates raw.csv containing of texts and Base64 image strings.
+
+preprocess.py generates vector.csv after data exploration
+1. drop all columns with duplicate texts.
+2. 75% of texts are in string length of 28.
+3. drop texts with length<2 for search effectiveness
+4. text preprocessing (stop words, lemmatization, embedding)
+5. creating payloads with Base64 image strings with key "url"
+6. adding (id, embeddings, payload=Base64 string) to a qdrant cloud collection

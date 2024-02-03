@@ -1,0 +1,9 @@
+Django~=4.2.9
+nltk~=3.8.1
+qdrant-client
+transformers~=4.37.2
+pillow~=10.2.0
+torch
+pandas~=2.0.3
+
+matplotlib~=3.7.4

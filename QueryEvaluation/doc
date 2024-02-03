@@ -1,0 +1,24 @@
+1. Provide a set of example queries that effectively showcase the capabilities of your
+implemented system. These queries should yield relevant images, demonstrating the accuracy and
+efficiency of your text2image search solution.
+
+a. Positives = ["cat", "bike", "baby", "boxing", ,"football", "gun violence", "violence"]
+   single word queries are most effective as the dataset majorly consists of tags.
+
+b. Positives = ["car","a group of cars"]
+   system able to differentiate between single and a group of same objects.
+
+2. Provide examples of queries that do not perform well,
+accompanied by explanations outlining the shortcomings of the system.
+
+a. Negatives = ["guitar"]
+   queries without relevant data in collection will yield irrelevant results.
+
+b. Negatives  = ["black cat", "a poster about gun violence"]
+   system doesn't perform well on long queries and nouns used before main query.
+   for instance "black cat" yields negative while "a cat" will yield positive because of text preprocessing
+
+Suggest a method of quantitative evaluation of retrieval accuracy. (e.g. how to label dataset and prepare queries?)
+1. for labelled dataset precision is quite crucial in understanding false positives compared to recall.
+assuming the general scenario that dataset is imbalanced, F1-score is an ideal evaluation metric.
+
